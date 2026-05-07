@@ -81,3 +81,11 @@ from orders
 join customers
 on customers.customer_id = orders.customer_id
 group by customers.customer_name, orders.order_date;
+
+#7
+
+SELECT customers.city, SUM(orders.sales)
+FROM customers
+JOIN orders
+ON customers.customer_id = orders.customer_id
+GROUP BY customers.city;
